@@ -3,3 +3,36 @@
   margin: 0;
   padding: 0;
 }
+
+.pages {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    cursor: pointer;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    box-shadow:
+      1px 12px 20px 0px rgb(0 0 0 / 13%),
+      1px 2px 4px 0px rgb(0 0 0 / 5%);
+    .image {
+      margin: 30px;
+      border-radius: 30px;
+      overflow: hidden;
+      img {
+        max-width: 100%;
+      }
+    }
+    h3 {
+      width: fit-content;
+      margin-bottom: 30px;
+    }
+  }
+}
