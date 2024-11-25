@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+.container {
+  margin: 30px auto;
+  width: fit-content;
+  width: 700px;
+  padding-right: 15px;
+  padding-left: 15px;
+  @media (max-width: 730px) {
+    width: 100%;
+  }
+  .input-field {
+    background-color: #009688;
+    padding: 15px;
+    display: flex;
+    position: relative;
+    input {
+      background-color: #ffffff55;
+      display: block;
+      padding-left: 15px;
+      font-size: 20px;
+      color: white;
+      width: calc(100% - 20px);
+      height: 40px;
+    }
+    button {
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      display: block;
+      font-size: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #009688;
+      transition: transform 0.3s;
+      position: absolute;
+      right: 15px;
+      cursor: pointer;
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .tasks-field {
+    background-color: #f6f6f6;
+    padding: 15px;
+    display: grid;
+    gap: 10px;
+    .empty {
+      color: #777;
+      background-color: white;
+      padding: 10px;
+    }
+    .task {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      p {
+        padding: 10px 0 10px 10px;
+        font-size: 15px;
+        font-weight: 500;
+        flex: 1;
+        cursor: pointer;
+        margin-right: 10px;
+        &.completed {
+          text-decoration: line-through;
+        }
+      }
+      button {
+        height: fit-content;
+        background-color: #e91e63;
+        color: white;
+        border-radius: 4px;
+        padding: 4px 8px;
+        font-weight: bold;
+        font-size: 12px;
+        transition: background-color 0.3s;
+        margin-right: 10px;
+        &:hover {
+          background-color: hsl(340, 82.2%, 41.6%);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .counters {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    span {
+      color: white;
+      padding: 0 5px;
+      border-radius: 3px;
+      display: inline-block;
+      font-size: 11px;
+      font-weight: bold;
+    }
+    .tasks span {
+      background-color: #e91e63;
+    }
+    .completed span {
+      background-color: #03a9f4;
+    }
+  }
+}
