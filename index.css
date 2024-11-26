@@ -9,7 +9,9 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 40px;
   .card {
+    outline: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,10 +24,15 @@
     box-shadow:
       1px 12px 20px 0px rgb(0 0 0 / 13%),
       1px 2px 4px 0px rgb(0 0 0 / 5%);
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: hsl(0, 0%, 91.5%);
+    }
     .image {
       margin: 30px;
       border-radius: 30px;
       overflow: hidden;
+      height: 240px;
       img {
         max-width: 100%;
       }
