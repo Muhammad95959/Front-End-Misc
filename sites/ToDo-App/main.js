@@ -5,10 +5,10 @@ const tasksCounter = document.querySelector(".counters .tasks span");
 const completedCounter = document.querySelector(".counters .completed span");
 
 let tasksArr = JSON.parse(window.localStorage.getItem("tasks"));
+if (tasksArr === null) tasksArr = [];
 let completedNum = 0;
 let tasksNum = tasksArr.length;
 tasksCounter.textContent = tasksNum;
-if (tasksArr === null) tasksArr = [];
 if (tasksArr.length === 0) {
   addEmptyPlaceHolder();
 } else {
