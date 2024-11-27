@@ -36,7 +36,8 @@ deleteBtn.addEventListener("click", function () {
 
 showBtn.addEventListener("click", function () {
   const items = Object.keys(window.localStorage);
-  results.innerHTML = "";
+  if (items.length === 0) results.innerHTML = "Local Storage Is Empty";
+  else results.innerHTML = "";
   for (let i = 0; i < items.length; i++) {
     const p = document.createElement("p");
     p.textContent = items[i];
